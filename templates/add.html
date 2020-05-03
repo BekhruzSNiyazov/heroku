@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Add Post{% endblock %}
+{% block body %}
+	<style type="text/css">
+		textarea {
+			border-radius: 5px;
+		}
+	</style>
+	<form action="/adding" method="post">
+		<center>
+			<h2>Add Post</h2>
+			<input type="text" name="title" class="in" placeholder="Please, insert the title:"><br>
+			<textarea name="post" id="textarea" rows="15" cols="125" placeholder="Type your post here:"></textarea>
+		</center>
+		<button style="margin-left: 77%;" class="ap" type="submit">Add Post</button>
+	</form>
+{% endblock %}

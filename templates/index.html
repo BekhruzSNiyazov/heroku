@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block body %}
+	{% for post in posts %}
+		<hr>
+		<div style="margin-left: 5%;">
+			<a class="link" href="{{post.title}}-post.html">{{post.title}}</a> <a class="link" href="/{{post.username}}">@{{post.username}}</a> {{post.pub_date}} {% if post in delete %}<a href="/delete-{{post.title}}" class="d">Delete Post</a>{% endif %}<br>
+			<div style="font-size: 95%; color: gray;">{{post.body}}</div>
+		</div>
+		<hr>
+	{% endfor %}
+{% endblock %}

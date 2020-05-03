@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Users{% endblock %}
+{% block body %}
+	{% if users %}
+		{% for user in users %}
+			{{users.index(user) + 1}}. <a href="/{{user.username}}">{{user}}</a><br>
+		{% endfor %}
+	{% else %}
+		<h2>There are no users yet... You'll be the first!</h2>
+	{% endif %}
+{% endblock %}
